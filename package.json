@@ -4,20 +4,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "vercel dev",
-    "build": "react-scripts build",
-    "start": "node server.js"
+    "dev": "vercel dev"
   },
-  "dependencies": {
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0",
-    "react-scripts": "^5.0.1"
-  },
-  "engines": {
-    "node": ">=18.0.0"
-  },
-  "keywords": ["vercel", "react", "serverless"],
+  "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "A React app with serverless functions deployed on Vercel."
+  "description": ""
 }
