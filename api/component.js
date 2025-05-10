@@ -6,6 +6,10 @@ const DynamicComponent = ({ name }) => {
 };
 
 export default (req, res) => {
+    res.setHeader('Access-Control-Allow-Origin', '*'); // Allow all origins
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS'); // Allow specific HTTP methods
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+  
   const { name = 'World' } = req.query;
   const componentHTML = renderToString(<DynamicComponent name={name} />);
   res.status(200).json({ component: componentHTML });
