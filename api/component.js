@@ -7,7 +7,7 @@ const DynamicComponent = ({ name }) => {
 
 export default (req, res) => {
   // Set CORS headers
-  res.setHeader('Access-Control-Allow-Origin', 'http://localhost:5173'); // Allow only your frontend
+  res.setHeader('Access-Control-Allow-Origin', '*'); // Allow only your frontend
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS'); // Allow specific HTTP methods
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization'); // Allow specific headers
 
