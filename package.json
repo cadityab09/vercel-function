@@ -1,0 +1,13 @@
+{
+  "type": "module",
+  "name": "hello-vercel",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vercel dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
