@@ -6,19 +6,15 @@ const DynamicComponent = ({ name }) => {
 };
 
 export default (req, res) => {
-  // Set CORS headers
-  res.setHeader('Access-Control-Allow-Origin', '*'); // Allow only your frontend
-  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS'); // Allow specific HTTP methods
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization'); // Allow specific headers
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
 
-  // Handle preflight requests
   if (req.method === 'OPTIONS') {
-    res.status(200).end(); // Respond to preflight request
+    res.status(200).end();
     return;
   }
 
-  // Main logic for the function
   const { name = 'World' } = req.query;
-  const componentHTML = renderToString(<DynamicComponent name={name} />);
-  res.status(200).json({ component: componentHTML });
+  res.status(200).json({ name });
 };
